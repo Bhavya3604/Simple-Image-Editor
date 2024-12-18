@@ -51,9 +51,63 @@
                     </span>
                 </div>
 
+                <div class="col s6">
+                    <span class="range-field">
+                        <label for="grayscaleSlider">Graycale</label>
+                        <input id="grayscaleSlider" type="range" value="100" min="0" max="200" onchange="applyFilter()">   
+                    </span>
+                </div>
+
+                <div class="col s6">
+                    <span class="range-field">
+                        <label for="saturationSlider">Saturation</label>
+                        <input id="saturationSlider" type="range" value="100" min="0" max="200" onchange="applyFilter()">   
+                    </span>
+                </div>
+
+                <div class="col s6">
+                    <span class="range-field">
+                        <label for="sepiaSlider">Sepia</label>
+                        <input id="sepiaSlider" type="range" value="100" min="0" max="200" onchange="applyFilter()">   
+                    </span>
+                </div>
+
+                <div class="col s6">
+                    <span class="range-field">
+                        <label for="hueSlider">Hue</label>
+                        <input id="hueSlider" type="range" value="100" min="0" max="200" onchange="applyFilter()">   
+                    </span>
+                </div>
+
+
+
                 
             </div>
         </div>
+
+        <div class="preset-filters">
+            <h6>Preset Filters</h6>
+            <button class="btn green" onclick="brightenFilter()">Brighten</button>
+            <button class="btn green" onclick="funkyFilter()">Funky</button>
+            <button class="btn green" onclick="bwFilter()">Black & White</button>
+            <button class="btn green" onclick="vintageFilter()">Vintage</button>
+        </div>
+
+        <div class="file-control">
+            <h6>File Controls</h6>
+            <a id="link"></a>
+            <div class="file-field input-field">
+                <div class="btn green">
+                    <span>Upload Image</span>
+                    <input type="file" accept="image/*" onchange="uploadImage(event)">
+                </div>
+                <div class="file-path-wrapper">
+                    <input class="file-path" type="text">
+                </div>
+            </div>
+        </div>
     </div>
+
+    <script src="index.js"></script>
 </body>
 </html>
